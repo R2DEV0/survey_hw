@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+
+<style>
+
+    #thediv{
+        background-color: silver;
+        margin-left: 600px;
+        margin-top: 20px;
+        display: inline-block;
+        padding: 20px;
+        font-size: 30px;
+        border: 3px solid black;
+    }
+
+    button{
+            font-size: 20px;
+            font-family: cursive;
+            margin-left: 280px;
+            border-radius: 3px;
+            border: 2px solid black;
+    }
+    
+</style>
+
+
+</head>
+
+<body>
+    <div id ="thediv">
+        <h1>Here is what you submitted:</h1>
+
+        <p><b>Name:</b> {{ submittedname }}</p>
+        <p><b>Dojo Location:</b> {{ submittedlocation }}</p>
+        <p><b>Favorite Language:</b>{{ submittedlanguage }}</p>
+        <p><b>Comments:</b> {{ submittedcomments }}</p>
+
+        <form action="/backhome">
+            <button type='submit' >Go Home</button>
+        </form>
+
+        
+
+    </div>
+
+</body>
+
+</html>

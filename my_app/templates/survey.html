@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+
+    <style>
+
+        body{
+            margin: 0 auto;
+            background-color: aquamarine;
+        }
+
+        form{
+            border: 1px solid black;
+            display: inline-block;
+            padding: 20px;
+            margin-left:740px;
+            margin-top: 50px;
+            font-family: cursive;
+            background-color: gainsboro;
+        }
+
+        #locations{
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-family: cursive;
+        }
+
+        #user_name{
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-family: cursive;
+        }
+
+        #languages{
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-family: cursive;
+        }
+
+        #comments{
+            margin-bottom: 15px;
+            font-size: 20px;
+            font-family: cursive;
+            vertical-align: top;
+            text-align: top;
+        }
+
+        button{
+            font-size: 20px;
+            font-family: cursive;
+            margin-left: 60px;
+            border-radius: 5px;
+            border: 2px solid black;
+            background-color: gray;
+            color: white;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 50px;
+            font-family: cursive;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Fill out this form for no reason! </h1>
+
+    <form action ="users" method="POST">
+        {% csrf_token %}
+        <label for="user_name">Your Name:</label>
+        <input type="text" name="user_name" id="user_name" placeholder="First & Last Name">  <br>
+
+        <label for="dojo">Dojo Location:</label>
+        <select name="locations" id="locations">
+            <option value="select one">select one</option>
+            <option value="san_diego">San Diego</option>
+            <option value="seattle">Seattle</option>
+            <option value="tijuana">Tijuana</option>
+            <option value="antartica">Antartica</option>
+            <option value="idk">I don't go here</option>
+        </select>   <br>
+
+        <label for="dojo">Favorite Language:</label>
+        <select name="languages" id="languages">
+            <option value="select one">select one</option>
+            <option value="python">Python</option>
+            <option value="swift">Swift</option>
+            <option value="javascript">JavaScript</option>
+            <option value="c#">C#</option>
+            <option value="yo_mama">Yo Mama</option>
+        </select>   <br>
+
+        <label for="comments">Comment:</label>
+        <input type="text" name="comments" id="comments" placeholder="(Optional)" style="height: 100px";>  <br>
+
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+
+    </form>
+
+</body>
+
+</html>
